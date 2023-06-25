@@ -1,0 +1,21 @@
+Theory
+- Vibration can be defined as the mechanical oscillation about an equilibrium position of a
+machine or component or simply the back and forth motion of a machine or component.
+
+Material
+- Vibration Sensor (Vibration SW-420), LED-yellow, Logic toggle, GROUND, POWER.
+
+Method
+1. In Proteus 8, import the required components from pick a device, i.e. the vibration sensor
+and logic toggle.
+2. Drag and drop those components to the simulating area.
+3. Go to the Terminal section and drag 2 GROUND and a POWER component.
+4. Connect the GND of vibration sensor board to the GROUND and POWER to the Vcc.
+5. Drag the buzzer and connect one of its pin to OUT of vibration board and the other pin of
+buzzer to the 2
+nd GROUND.
+6. Now connect the Logic toggle to the test pin of vibration sensor.
+7. The circuit should be similar to the image above.
+8. Load the Hex file by clicking on vibration sensor and browse to where the HEX file is
+located and press play.
+9. Click on the toggle button to hear the buzzer sound.
