@@ -21,3 +21,12 @@ Note: if .hex path is not shown then click on file preferences and select the
 compileand upload checkboxes and click on ok and re run the code.
 2. Now on Proteus 8, click on Arduino and in program file field, paste the copied hex file
 path.
+
+CODE:
+void setup(){
+Serial.begin(9600);
+}
+void loop(){
+Serial.println("Hello from UART");
+delay(1);
+}
