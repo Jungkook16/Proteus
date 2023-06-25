@@ -1,0 +1,23 @@
+Theory
+UART (stands for Universal Asynchronous Reception andTransmission). It is a simple serial
+communication protocol that allows the host to communicate with the other devices. It has two data
+lines, one to transmit (TX) and another to receive (RX). For different embedded devices, youwill
+need to check on the datasheets to understand which pins can be used for UART.
+
+Material
+Proteus 8, Arduino IDE, Arduino UNO Library, Virtual Terminal.
+
+
+Method
+1. Open Proteus 8, click on the P button (Pick a device), search for Arduino and add
+Arduino UNO to the simulating area.
+2. Go the virtual instruments mode on the left side menu and add virtual terminal to the
+simulating area
+3. Click on the pins of the components and connect them as shown below
+4. Now open Arduino IDE, go to file menu > Examples > Basic >DigitalReadSerial this will
+open up the following code
+1. Run this file and copy the hex file path from the console.
+Note: if .hex path is not shown then click on file preferences and select the
+compileand upload checkboxes and click on ok and re run the code.
+2. Now on Proteus 8, click on Arduino and in program file field, paste the copied hex file
+path.
