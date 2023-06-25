@@ -1,0 +1,72 @@
+Theory
+- A photoresistor (also known as a Photocell, or light-dependent resistor, LDR, or photoconductive cell) is a passive component that decreases resistance with respect to receiving
+luminosity (light) on the component's sensitive surface. The resistance of a photoresistor
+decreases with increase in incident l intensity; in other words, it exhibits photoconductivity.
+Material
+1-Arduino UNO R3
+Arduino UNO is a low-cost, flexible, and easy-to-use programmable open-source microcontroller
+board that can be integrated into a variety of electronic projects. ArduinoUNO features AVR
+microcontroller Atmega328, 6 analogue input pins, and 14 digital I/O pins out of which 6 are used as PWM output.
+2-Photoresistor / LDR
+Photoresistors are also sometimes referred as LDR (Light Dependent Resistor), semiconductor
+photoresistor, photoconductor, or photocell. Photoresistor changes itsresistance only when it is exposed to light. In other words, the flow of electric currentthrough the photoresistor increases
+when the intensity of light increases.
+3-Resistor (MINRES1K)
+The main purpose of resistor is to reduce the current flow and to lower the voltage in any
+particular portion of the circuit.
+4-GROUND
+Grounding something simply means connecting it to ground. And in electronics, ground is just a
+name we give to a certain point in the circuit. For example, in a circuit with one battery (with a
+positive and a negative terminal), we usually refer to the negative terminal as ground.
+5-DC Power
+Direct current (DC) is one-directional flow of electric charge. An electrochemical cell is a prime
+example of DC power. Direct current may flow through a conductor such as a wire butcan also
+flow through semiconductors and insulators.
+
+Method
+1. Install all softwares and required libraries from the prerequisite section
+2. For importing of library, extract the downloaded .rar file from the given link > Copy both
+files from it > paste it in the following directory
+C:\Program Files (x86)\Labcenter Electronics\Proteus 8
+Professional\LIBRARY
+3. Open Proteus 8 and create a new project with all the default options selected
+4. Once the schematic capture window is visible, click on the component mode on the left
+pane
+5. Click on P (Pick a device), search for the following components on the new window,
+double click on them and click OK; to find them on your working window
+UNO R3
+LDR
+MINRES1K
+6. Now click on Generators in the left pane and select DC add it to simulating area
+7. Similarly add GROUND from the left pane in terminals section
+8. Connect the DC to first terminal of LDR
+9. The second terminal of LDR to the Analog A0 port of the Arduino board and the first
+terminal of the resistor to the same
+10. Connect the second terminal of the resistor to the GROUND
+11. To supply some power to the circuit, click on the DC power and change the value of the
+voltage field to 5
+12. From the left pane, select the virtual terminal from the virtual instruments mode and add
+it to the simulating area
+13. Connect the RXD pin of the terminal to the PD1/TXD port in Arduino and TXD pin to
+PD0/RXD
+14. The circuit should be similar to the below image
+15. Now on Arduino IDE, type the following code
+void setup()
+{
+Serial.begin(9600);
+}
+void loop()
+{
+Serial.println(analogRead(A0));
+}
+16. Now to generate the binary .HEX file, compile the code by clicking on Sketch from the
+top menu bar and click on Verify / Compile
+17. Next, Click on Export compiled binary
+18. Copy the path of the generated .hex file from the below terminal
+19. Back on Proteus 8, click on Arduino UNO R3 and in the program file field, paste the
+copied hex file path OR browse to the specific directory and select the hex file and click
+OK
+20. Now run the simulation by clicking on play button in the bottom left of the window
+21. A terminal window pops up that shows the current analog signal from the LDR
+22. Change the intensity of the LDR to see changes in the output value of the terminal
+window
